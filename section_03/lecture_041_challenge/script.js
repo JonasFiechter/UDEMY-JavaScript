@@ -15,8 +15,8 @@ the function you created before
 Test data: 125, 555 and 44
 */
 
-const tips = [0.15, 0.20]
-const bills = [125, 555, 44]
+const tips = [0.15, 0.20];
+const bills = [125, 555, 44];
 
 function calc_tip(bill) {
     if (bill < 50) {
@@ -28,6 +28,6 @@ function calc_tip(bill) {
     }
 }
 
-const total = [calc_tip(bills[0]), calc_tip(bills[1]), calc_tip(bills[2])]
+const total = [calc_tip(bills[0]), calc_tip(bills[1]), calc_tip(bills[2])];
 
-console.log(total)
+console.log(total);
