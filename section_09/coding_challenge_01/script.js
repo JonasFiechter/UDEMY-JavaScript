@@ -30,17 +30,65 @@ GOOD LUCK 😀
 
 'use strict'
 
-const players_1 = [5, 2, 4, 5]
-const players_2 = [2, 3, 4, 5]
-const [gk_team_1] = players_1
-const [gk_team_2] = players_2
-const [, ...fieldPlayers_team_1] = players_1
-const [, ...fieldPlayers_team_2] = players_2
-const allPlayers = [...players_1, ...players_2]
-const players_1_final = [...players_1, 'Thiago', 'Coutinho', 'Perisic']
-
 const game = {
-    team_1: 'Bayern Munich',
-    team_2: 'Borrussia Dortmund',
-    players: []
+    team1: 'Bayern Munich',
+    team2: 'Borrussia Dortmund',
+    players: [
+                [
+                    'Neuer',
+                    'Pavard',
+                    'Martinez',
+                    'Alaba',
+                    'Davies',
+                    'Kimmich',
+                    'Goretzka',
+                    'Coman',
+                    'Muller',
+                    'Gnarby',
+                    'Lewandowski',
+                ],
+                [
+                    'Burki',
+                    'Schulz',
+                    'Hummels',
+                    'Akanji',
+                    'Hakimi',
+                    'Weigl',
+                    'Witsel',
+                    'Hazard',
+                    'Brandt',
+                    'Sancho',
+                    'Gotze',
+                ],
+            ],
+    score: '4:0',
+    scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
+                'Hummels'],
+    date: 'Nov 9th, 2037',
+    odds: {
+            team1: 1.33,
+            x: 3.25,
+            team2: 6.5,
+        },
+};
+
+const players_1 = game.players[0];
+const players_2 = game.players[1];
+const [gk_team_1] = players_1;
+const [gk_team_2] = players_2;
+const [, ...fieldPlayers_team_1] = players_1;
+const [, ...fieldPlayers_team_2] = players_2;
+const allPlayers = [...players_1, ...players_2];
+const players_1_final = [...players_1, 'Thiago', 'Coutinho', 'Perisic'];
+const team_1 = game.odds['team1'];
+const draw = game.odds['x'];
+const team_2 = game.odds['team2'];
+
+const print_goals = function(...players) {
+    console.log(players.length)
 }
+
+print_goals(...game.scored)
+
+team_1 < team_2 && console.log('Team 1 is more likely to win')
+team_1 > team_2 && console.log('Team 2 is more likely to win')
