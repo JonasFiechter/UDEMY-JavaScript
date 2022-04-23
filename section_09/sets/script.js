@@ -38,11 +38,17 @@ const restaurant = {
     }
 };
 
-// without optional chaining
-if (restaurant.opening_hours.friday.open)
-    console.log(`${restaurant.opening_hours.friday.open}`)
-else
-    console.log('Day off')
+const order_set = new Set ([
+    'Pasta',
+    'Pasta',
+    'Pasta',
+    'Pasta',
+    'Pizza',
+    'Risotto',
+]);
 
-// with optional chaining
-console.log(restaurant.opening_hours.friday?.open ?? 'Day off')
+console.log(order_set.size); // Returns the ammount of itens not repeating in the set
+console.log(order_set.has('Pizza')); // Returns a boolean if the item exist or not
+
+order_set.add('Garlic Bread')
+order_set.delete('Pasta')

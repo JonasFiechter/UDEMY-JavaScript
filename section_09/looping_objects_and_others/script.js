@@ -38,11 +38,16 @@ const restaurant = {
     }
 };
 
-// without optional chaining
-if (restaurant.opening_hours.friday.open)
-    console.log(`${restaurant.opening_hours.friday.open}`)
-else
-    console.log('Day off')
+for (const day of Object.keys(opening_hours)) {
+    // console.log(day)
+}
 
-// with optional chaining
-console.log(restaurant.opening_hours.friday?.open ?? 'Day off')
+const values = Object.values(opening_hours);
+// console.log(values);
+
+const entries = Object.entries(opening_hours);
+// console.log(entries)
+
+for (const [key, {open, close}] of entries) {
+    console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
