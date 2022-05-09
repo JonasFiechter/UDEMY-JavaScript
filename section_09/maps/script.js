@@ -51,3 +51,41 @@ rest
 
 console.log(rest.get('name'))
 console.log(rest.get(true))
+
+const question = new Map([
+    ['question', 'what is the best programming language?'],
+    [1, 'c'],
+    [2, 'java'],
+    [3, 'javaScript'],
+    ['correct', 3],
+    [true, 'correct'],
+    [false, 'try again'],
+]);
+
+console.log(question)
+console.log(opening_hours)
+console.log(Object.entries(opening_hours))
+
+// convert object to a map
+const hours_map = new Map(Object.entries(opening_hours))
+console.log(hours_map)
+
+for (const [key, value] of question) {
+    if(typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+};
+
+const answer = 2
+
+// my solution
+if (answer === question.get('correct')) {
+    console.log(question.get(true))
+} else {console.log(question.get(false))}
+
+// teacher's solution
+console.log(question.get(answer === question.get('correct')))
+
+//convert map to array
+console.log([...question]);
+console.log(question.entries());
+console.log(question.keys());
+console.log(question.values());
