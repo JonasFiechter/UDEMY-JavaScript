@@ -18,12 +18,12 @@ function checkIn(flightNum, passenger) {
     }
 }
 
-// checkIn(flight, jonas);
-// console.log(flight, jonas)
+checkIn(flight, jonas);
+console.log(flight, jonas)
 
-// // Is the same as doing...
-// const flightNum = flight;
-// const passenger = jonas;
+// Is the same as doing...
+const flightNum = flight;
+const passenger = jonas;
 
 function newPassport(person) {
     person.passport = Math.trunc(Math.random() * 100000000000)
