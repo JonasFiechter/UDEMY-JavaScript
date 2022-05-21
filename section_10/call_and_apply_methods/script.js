@@ -14,7 +14,6 @@ const lufthansa = {
 lufthansa.book(239, 'Jonas Fiechter');
 lufthansa.book(531, 'Mike Smith');
 
-
 const eurowings = {
     airline: 'Eurowings',
     iataCode: 'EW',
@@ -26,11 +25,9 @@ const book = lufthansa.book
 // Does NOT work
 // book(132, 'Sarah Williams');
 
-
 // Call method
 // Call the function with the first argument as the 'this.' keyword
 book.call(eurowings, 243, 'Sarah Williams')
-
 
 const swiss = {
     airline: 'Swiss',
@@ -39,7 +36,6 @@ const swiss = {
 }
 
 book.call(swiss, 594, 'Mary Cooper')
-
 
 // Apply Method
 const flightData = [572, 'George Cooper'];
