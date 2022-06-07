@@ -60,3 +60,31 @@ const plane2 = 'A320neo';
 console.log(plane2.includes('A320'));
 console.log(plane2.startsWith('A320'));
 console.log(plane2.startsWith('B'));
+
+// Split
+console.log('A very nice string'.split(' '))
+const [firstName, lastName] = 'Jonas Fiechter'.split(' ')
+console.log(firstName, lastName)
+
+// Join
+console.log([firstName, lastName].join(' '))
+
+const capitalizeName = (name) => {
+    const newName = name.split(' ')
+    const newNameArray = []
+    for(const n of newName) {
+        // Solution 1
+        // newNameArray.push(n[0].toUpperCase() + n.slice(1))
+
+        // Solution 2
+        newNameArray.push(n.replace(n[0], n[0].toUpperCase()))
+    }
+    return newNameArray.join(' ');
+}
+
+const nameCaptilized = capitalizeName('jessica ann von brovovicz');
+console.log(nameCaptilized);
+
+// Padding
+const message = 'Go to gate 23!';
+console.log(message.padStart(25, '£').padEnd(35, '£'));
