@@ -31,3 +31,32 @@ const checkMiddSeat = function(seat) {
 checkMiddSeat('11B');
 checkMiddSeat('23C');
 checkMiddSeat('3E');
+
+
+// Check email
+const email = 'test@gmail.com';
+const logInEmail = '   Test@gmail.com \n';
+
+//toLower | toUpper | trim()
+const lowerEmail = logInEmail.toLocaleLowerCase();
+const trimmedEmail = logInEmail.trim();
+
+const normalizedEmail = logInEmail.toLocaleLowerCase().trim()
+console.log(normalizedEmail)
+
+//replacing
+const priceGB = '188,96£';
+const priceUS = priceGB.replace('£', '$').replace(',', '.')
+console.log(priceGB, priceUS)
+
+const annoucement = 'All passengers come to boarding door 23, Boarding door 23!';
+console.log(annoucement.replace('door', 'gate'))
+console.log(annoucement.replaceAll('door', 'gate'))
+// replace with regular expression
+console.log(annoucement.replace(/door/g, 'gate'))
+
+//booleans
+const plane2 = 'A320neo';
+console.log(plane2.includes('A320'));
+console.log(plane2.startsWith('A320'));
+console.log(plane2.startsWith('B'));

@@ -47,7 +47,7 @@ rest
     .set('open', 11)
     .set('closed', 23)
     .set(true, 'We are open :D')
-    .set(false, 'We are closed :C')
+    .set(false, 'We are closed :C');
 
 console.log(rest.get('name'))
 console.log(rest.get(true))
