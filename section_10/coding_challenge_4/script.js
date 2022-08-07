@@ -30,4 +30,9 @@ document.body.append(document.createElement('button'));
 */
 
 
-console.log('TESTING SCRIPT')
+function testFunction() {
+    console.log('WORKING BUTTON');
+}
+
+const btnDoIt = document.querySelector('.btn-do-it');
+btnDoIt.addEventListener('click', testFunction)

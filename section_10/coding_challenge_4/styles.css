@@ -35,8 +35,21 @@ ul {
 .string-input-ul {
     display: flex;
     align-items: center;
+    padding: 30px;
+}
+
+.string-input-ul li {
+    padding-right: 10px;
 }
 
 .input-div button {
     min-width: 100px;
+    background-color: rgba(248, 255, 190, 0.575);
+    border-radius: 6px;
+}
+
+.input-div button:hover {
+    background-color: rgb(255, 103, 255);
+    cursor: pointer;
+    border-color: rgb(58, 6, 59);
 }
