@@ -29,10 +29,13 @@ document.body.append(document.createElement('textarea'));
 document.body.append(document.createElement('button'));
 */
 
-
-function testFunction() {
-    console.log('WORKING BUTTON');
-}
-
+//  Grab btn
 const btnDoIt = document.querySelector('.btn-do-it');
-btnDoIt.addEventListener('click', testFunction)
+btnDoIt.addEventListener('click', convert);
+
+//Grab textInputArea
+const textInput = document.getElementsByClassName('.text-input')
+
+function convert() {
+    console.log(`Result: ${textInput}`);
+};
