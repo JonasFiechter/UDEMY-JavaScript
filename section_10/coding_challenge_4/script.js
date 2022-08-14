@@ -34,8 +34,11 @@ const btnDoIt = document.querySelector('.btn-do-it');
 btnDoIt.addEventListener('click', convert);
 
 //Grab textInputArea
-const textInput = document.getElementById('text-input')
+const textInput = document.querySelector('.text-input')
+console.log(textInput.value)
 
 function convert() {
-    console.log(`Result: ${textInput.value}`);
+    const [word_1, word_2] = textInput.value.split('_')
+    const camelled = word_1 + word_2[0].toUpperCase() + word_2.slice(1)
+    console.log(`Result: ${camelled}`);
 };
