@@ -34,8 +34,8 @@ const btnDoIt = document.querySelector('.btn-do-it');
 btnDoIt.addEventListener('click', convert);
 
 //Grab textInputArea
-const textInput = document.getElementsByClassName('.text-input')
+const textInput = document.getElementById('text-input')
 
 function convert() {
-    console.log(`Result: ${textInput}`);
+    console.log(`Result: ${textInput.value}`);
 };
