@@ -53,3 +53,7 @@ ul {
     cursor: pointer;
     border-color: rgb(58, 6, 59);
 }
+
+.text-input {
+    min-height: 40px;
+}

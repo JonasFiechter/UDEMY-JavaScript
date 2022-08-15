@@ -37,7 +37,17 @@ btnDoIt.addEventListener('click', convert);
 const textInput = document.querySelector('.text-input')
 
 function convert() {
-    const [word_1, word_2] = textInput.value.split('_')
-    const camelled = word_1.toLowerCase() + word_2[0].toUpperCase() + (word_2.slice(1)).toLowerCase()
-    console.log(`Result: ${camelled}`);
+    const textRows = textInput.value.split('\n')
+    const camelledRows = []
+
+    for (let i = 0; i < textRows.length; i++) {
+        const word = textRows[i]
+        const [word_1, word_2] = word.split('_')
+        const camelled = word_1.toLowerCase() + word_2[0].toUpperCase() + (word_2.slice(1)).toLowerCase()
+        camelledRows.push(camelled)
+    }
+
+    const camelledText = camelledRows.join('\n')
+
+    console.log(`Result: ${camelledText}`);
 };
