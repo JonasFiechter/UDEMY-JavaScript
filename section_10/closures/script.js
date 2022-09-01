@@ -55,7 +55,8 @@ const secureBooking = function() {
     };
 };
 
-const booker = secureBooking();
+var booker1 = secureBooking();
+var booker2 = secureBooking();
 // Thanks to closure, it is possible to use the same variable of secureBooking which wouldn't be 
 // able to use from the scope chain in a usual way
 
@@ -63,8 +64,20 @@ const booker = secureBooking();
 // was created, even after that execution is gone;
 // It makes sure that a function doesn't lose connection to variables that existed at the function's
 // birth place;
-booker();
-booker();
-booker();
+booker1();
+booker1();
+booker1();
 
-console.dir(booker) // This method shows the properties of the function
+booker2();
+booker2();
+booker2();
+
+booker1();
+booker1();
+booker1();
+
+console.dir(booker2) // This method shows the properties of the function
+
+console.log(10/'2')
+console.log(10 && true && 'aosdko')
+console.log(('b' + 'a' + + 'z' + 'a').toUpperCase())
