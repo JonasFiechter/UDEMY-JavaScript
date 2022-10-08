@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: aliceblue;
+}
+
+section {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-content {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 255, 0.171);
+}
+
+.article1 {
+    display: flex;
+    flex: 1 1 480px;
+    flex-direction: column;
+    background-color: rgb(34, 34, 3);
+}
+
+.text1 {
+    display: flex;
+    flex: 1 1 480px;
+    background-color: darkolivegreen;
+}
+
+.text2 {
+    display: flex;
+    flex: 1 1 480px;
+    background-color: darkmagenta;
+}
